@@ -2,8 +2,8 @@ ArrayList <Ring> rings;
 boolean dark = false;
 void setup()
 {
-  //size(600,600);
-  fullScreen();
+  size(600,600);
+  //fullScreen();
   rectMode(CENTER);
   rings = new ArrayList<Ring>();
 
@@ -20,14 +20,14 @@ void draw()
   for (Ring r : rings)
     r.display();
 }
-  
+
 class Ring
 {
   float x;
   float y;
   float v;
   float c;
-  
+
   Ring(float xIn,float yIn, float vIn, float cIn)
   {
     x = xIn;
@@ -35,7 +35,7 @@ class Ring
     v = vIn;
     c = cIn;
   }
-  
+
   void display()
   {
     x -= v;
@@ -51,13 +51,13 @@ class Ring
        fill(0);
      if (i%2 != 0 && dark == false)
        fill(255);
-     else 
+     else
        fill(0);
      rotate(degrees(30));
      rect(x,y,100,50);
     }
     popMatrix();
-    
+
     if ((x > (200-10) && x < (200+10))||
         (x < (-200+10) && x > (-200-10))||
         (x > (200/10-10) && x < (200/10+10))||
@@ -65,7 +65,7 @@ class Ring
     {
       v = -v;
     }
-    
+
   }
 }
 
@@ -74,4 +74,3 @@ void keyPressed()
   if (key == 'o')
     dark  = !dark;
 }
-  
