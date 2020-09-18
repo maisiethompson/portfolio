@@ -7,9 +7,9 @@ boolean dark = false;
 float x;
 void setup()
 {
-  //size (800,800);
+  size (800,800);
   x = 15;
-  fullScreen();
+  //fullScreen();
   rectMode(CENTER);
   squares = new ArrayList<Square>();
   for (float i = width/x; i > 0; i --)
@@ -23,7 +23,7 @@ void setup()
 void draw()
 {
   background(0);
-  
+
   println(x);
   for (Square s : squares)
     s.display();
@@ -34,13 +34,13 @@ class Square
   float s;
   boolean c;
   float rotate = 0;
-  
+
   Square(float s, boolean c)
   {
     this.s = s;
     this.c = c;
   }
-  
+
   void display()
   {
     if (dark)
@@ -60,17 +60,17 @@ class Square
       fill(0);
     rect(0,0,s,s);
     popMatrix();
-    
+
     if (inverted)
       c = !c;
-    
+
   }
 }
 
   void keyPressed()
 {
   if (key == ' ')
-    inverted = !inverted; 
+    inverted = !inverted;
   if (key == 's')
     speed += 0.0001;
   if (key == 'd')
@@ -81,6 +81,6 @@ class Square
     dark = !dark;
   if (key == 'q')
     speed = 0.00005;
-  
+
 
 }
