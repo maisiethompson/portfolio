@@ -78,15 +78,15 @@ float x7 = .2;
 float x8 = .2;
 void setup()
 {
-  //size(600, 600);
-  fullScreen();
-  
+  size(600, 600);
+  //fullScreen();
+
   font = createFont("AvenirNextCondensed-UltraLight", 48);
 }
 
 void draw()
 {
- 
+
 
   background(#121212);
   sun();
@@ -98,9 +98,9 @@ void draw()
   saturn();
   uranus();
   neptune();
-  
-  
-  
+
+
+
  if (selector == 1)
  {
    x8 = 2;
@@ -108,13 +108,13 @@ void draw()
   neptune2 = 255;
   neptune3 = 0;
  }
- 
+
  if (selector > 1 | selector < 1)
  {
    neptune1 = neptune2 = neptune3 = 255;
    x8 = .2;
  }
- 
+
  if (selector == 2)
  {
    uranus1 = 255;
@@ -127,7 +127,7 @@ void draw()
    uranus1 = uranus2 = uranus3 = 255;
    x7 = .2;
  }
- 
+
  if (selector == 3)
  {
    saturn1 = 255;
@@ -140,7 +140,7 @@ void draw()
    saturn1 = saturn2 = saturn3 = 255;
    x6 = .2;
  }
- 
+
  if (selector == 4)
  {
    jupiter1 = 255;
@@ -153,7 +153,7 @@ void draw()
    jupiter1 = jupiter2 = jupiter3 = 255;
    x5 = .2;
  }
- 
+
  if (selector == 5)
  {
    mars1 = 255;
@@ -166,7 +166,7 @@ void draw()
    mars1 = mars2 = mars3 = 255;
    x4 = .2;
  }
- 
+
  if (selector == 6)
  {
    earth1 = 255;
@@ -179,7 +179,7 @@ void draw()
    earth1 = earth2 = earth3 = 255;
    x3 = .2;
  }
- 
+
  if (selector == 7)
  {
    venus1 = 255;
@@ -192,7 +192,7 @@ void draw()
    venus1 = venus2 = venus3 = 255;
    x2 = .2;
  }
- 
+
  if (selector == 8)
  {
    mercury1 = 255;
@@ -205,13 +205,13 @@ void draw()
    mercury1 = mercury2 = mercury3 = 255;
    x = .2;
  }
- 
+
  if (selector > 8 | selector < 0)
  {
    selector = 0;
  }
- 
- 
+
+
 }
 
 void keyPressed()
@@ -224,9 +224,9 @@ void keyPressed()
   {
     selector--;
   }
-  
- 
-  
+
+
+
   if (selector == 8)
   {
     showMercuryFacts = true;
@@ -235,7 +235,7 @@ void keyPressed()
   {
     showMercuryFacts = false;
   }
-  
+
   if (selector == 7)
   {
     showVenusFacts = true;
@@ -244,7 +244,7 @@ void keyPressed()
   {
     showVenusFacts = false;
   }
-  
+
   if (selector == 6)
   {
     showEarthFacts = true;
@@ -253,17 +253,17 @@ void keyPressed()
   {
     showEarthFacts = false;
   }
-  
+
   if(selector == 5)
   {
     showMarsFacts = true;
   }
-  
+
   else
   {
     showMarsFacts = false;
   }
-  
+
   if (selector == 4)
   {
     showJupiterFacts = true;
@@ -272,7 +272,7 @@ void keyPressed()
   {
     showJupiterFacts = false;
   }
-  
+
   if (selector == 3)
   {
     showSaturnFacts = true;
@@ -281,7 +281,7 @@ void keyPressed()
   {
     showSaturnFacts = false;
   }
-  
+
   if (selector == 2)
   {
     showUranusFacts = true;
@@ -290,12 +290,12 @@ void keyPressed()
   {
     showUranusFacts = false;
   }
-  
+
   if (selector == 1)
   {
     showNeptuneFacts = true;
   }
-  
+
   else
   {
     showNeptuneFacts = false;
@@ -314,12 +314,12 @@ void sun()
 
 void mercury()
 {
-  
+
    if (showMercuryFacts == true)
   {
     mercuryFacts();
   }
-  
+
   noFill();
   strokeWeight(x);
   stroke(mercury1, mercury2, mercury3);
@@ -507,11 +507,11 @@ void mercuryFacts()
   stroke(#B77116);
   fill(#B77116);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 3,035 miles                        moons: 0                                                          distance from sun: 35.98 million miles             temperature can range from 801°F to -279°F                                                     orbital period: 88 Earth days                                                                              fun fact: because mercury orbits so quickly, it was believed by ancient civilizations to be two stars, one that appeared in the morning and one that appeared at night.";   
-  textSize(20); 
+  String words ="diameter: 3,035 miles                        moons: 0                                                          distance from sun: 35.98 million miles             temperature can range from 801°F to -279°F                                                     orbital period: 88 Earth days                                                                              fun fact: because mercury orbits so quickly, it was believed by ancient civilizations to be two stars, one that appeared in the morning and one that appeared at night.";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
-  
+
 }
 
 void venusFacts()
@@ -526,8 +526,8 @@ void venusFacts()
   stroke(#E88502);
   fill(#E88502);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 7,520.8 miles                        moons: 0                                                          distance from sun: 67.24 million miles             temperature is around 880°F                                                    orbital period: 225 Earth days                                                                              fun fact: a day on Venus is longer than a year on Venus";   
-  textSize(20); 
+  String words ="diameter: 7,520.8 miles                        moons: 0                                                          distance from sun: 67.24 million miles             temperature is around 880°F                                                    orbital period: 225 Earth days                                                                              fun fact: a day on Venus is longer than a year on Venus";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
@@ -553,8 +553,8 @@ void earthFacts()
   stroke(#435DFF);
   fill(#435DFF);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 7,917.5 miles                       moons: 1                                                         distance from sun: 92.96 million miles             average temperature is around 61°F                                                    orbital period: 365 Earth days                                                                              fun fact: Earth is the only planet not named after a god or goddess. ";   
-  textSize(20); 
+  String words ="diameter: 7,917.5 miles                       moons: 1                                                         distance from sun: 92.96 million miles             average temperature is around 61°F                                                    orbital period: 365 Earth days                                                                              fun fact: Earth is the only planet not named after a god or goddess. ";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
@@ -581,8 +581,8 @@ void marsFacts()
   stroke(#E83642);
   fill(#E83642);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 4,212 miles                      moons: 2                                                         distance from sun: 141.6 million miles             temperature ranges from -195°F to 70°F                                                    orbital period: 687 Earth days                                                                              fun fact: Mars is home to the tallest mountain in the solar system ";   
-  textSize(20); 
+  String words ="diameter: 4,212 miles                      moons: 2                                                         distance from sun: 141.6 million miles             temperature ranges from -195°F to 70°F                                                    orbital period: 687 Earth days                                                                              fun fact: Mars is home to the tallest mountain in the solar system ";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
@@ -617,8 +617,8 @@ void jupiterFacts()
   stroke(#D6A68F);
   fill(#D6A68F);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 86,881.4 miles                      moons: around 67 (Io, Europa, Ganymede, and Callisto shown)                                                         distance from sun: 483.8 million miles             temperature is around -234°F on the outside of Jupiter                                                orbital period: 12 Earth years                                                                              fun fact: Jupiter is twice as big as every other planet combined. ";   
-  textSize(20); 
+  String words ="diameter: 86,881.4 miles                      moons: around 67 (Io, Europa, Ganymede, and Callisto shown)                                                         distance from sun: 483.8 million miles             temperature is around -234°F on the outside of Jupiter                                                orbital period: 12 Earth years                                                                              fun fact: Jupiter is twice as big as every other planet combined. ";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
@@ -656,8 +656,8 @@ void saturnFacts()
   stroke(#797973);
   fill(#797973);
   arc(width/9, height/5, 45,4, 0, PI+QUARTER_PI,PIE );
-  String words ="diameter: 72,367.4 miles                      moons: around 53 (Titan, Enceladus, Rhea, and Tethys shown)                                                         distance from sun: 888.2 million miles             temperature is around -288°F                                               orbital period: 29 Earth years                                                                              fun fact: Although other planets have rings, Saturn's rings are the only ones that can be seen from Earth.";   
-  textSize(20); 
+  String words ="diameter: 72,367.4 miles                      moons: around 53 (Titan, Enceladus, Rhea, and Tethys shown)                                                         distance from sun: 888.2 million miles             temperature is around -288°F                                               orbital period: 29 Earth years                                                                              fun fact: Although other planets have rings, Saturn's rings are the only ones that can be seen from Earth.";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
@@ -696,8 +696,8 @@ void uranusFacts()
   stroke(#5A5EFF);
   fill(#5A5EFF);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 31,518 mi                      moons: 27 (Miranda, Ariel, Umbriel, Titania, and Oberon shown)                                                        distance from sun: 1.784 billion miles             temperature is around -357°F                                                orbital period: 84 Earth years                                                                              fun fact: Venus and Uranus are the only planets to rotate and orbit the sun clockwise. ";   
-  textSize(20); 
+  String words ="diameter: 31,518 mi                      moons: 27 (Miranda, Ariel, Umbriel, Titania, and Oberon shown)                                                        distance from sun: 1.784 billion miles             temperature is around -357°F                                                orbital period: 84 Earth years                                                                              fun fact: Venus and Uranus are the only planets to rotate and orbit the sun clockwise. ";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
@@ -720,8 +720,8 @@ void neptuneFacts()
   stroke(#5A5EFF);
   fill(#5A5EFF);
   ellipse(width/9, height/5, 37, 37);
-  String words ="diameter: 30,599 miles                    moons: 14 (Triton shown)                                                        distance from sun: 2.795 billion miles             temperature is around -353°F                                                orbital period: 165 Earth years                                                                              fun fact: the only spacecraft to ever fly past Neptune was the Voyager 2. ";   
-  textSize(20); 
+  String words ="diameter: 30,599 miles                    moons: 14 (Triton shown)                                                        distance from sun: 2.795 billion miles             temperature is around -353°F                                                orbital period: 165 Earth years                                                                              fun fact: the only spacecraft to ever fly past Neptune was the Voyager 2. ";
+  textSize(20);
   fill(255);
   text(words, width/40.35, height/3.5, 260, 800);
 }
