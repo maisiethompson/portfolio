@@ -6,5 +6,5 @@
 
 
 
-##Solar System
+## Solar System
 <canvas data-processing-sources="solar_system.pde"></canvas>
