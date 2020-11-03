@@ -1,4 +1,4 @@
-# portfolio
+# Maisie Thompson's Portfolio
 ## 2D Gravitational Attraction
 
 <script src="processing.min.js"></script>
@@ -14,3 +14,6 @@
 
 
 <canvas data-processing-sources="noisy_fabric.pde"></canvas>
+
+##Solar System
+<canvas data-processing-sources="solar_system.pde"></canvas>
